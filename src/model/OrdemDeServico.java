@@ -15,10 +15,15 @@ public abstract class OrdemDeServico {
     }
 
     public enum TipoServico {
-        MOTOR,
-        TRANSMISSAO,
-        SUSPENSAO
+        REVISAO,
+        PREVENTIVO,
+        CORRETIVO,
+        MOTOR
     }
+    public enum SisServico {
+
+    }
+
 
     public final static String[] ETAPAS_OS = new String[] {"Reclame", "Troca de Peças", "Revisão Final"};
 

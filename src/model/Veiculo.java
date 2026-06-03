@@ -9,6 +9,7 @@ public class Veiculo {
     private String tipo;
     private int ano;
     private String cor;
+    private Motor motor;
     private String placa;
     private String vin;
     private ArrayList<Peca> listaPecas;
@@ -56,6 +57,14 @@ public class Veiculo {
     public String getVin() { return vin; }
     public void setVin(String vin) { this.vin = vin; }
 
+    public Motor getMotor() {
+        return motor;
+    }
+
+    public void setMotor(Motor motor) {
+        this.motor = motor;
+    }
+
     public ArrayList<Peca> getListaPecas() { return listaPecas; }
     public void setListaPecas(ArrayList<Peca> listaPecas) { this.listaPecas = listaPecas; }
 
@@ -71,6 +80,7 @@ public class Veiculo {
                 ", tipo='" + tipo + '\'' +
                 ", ano=" + ano +
                 ", cor='" + cor + '\'' +
+                ", motor=" + motor +
                 ", placa='" + placa + '\'' +
                 ", vin='" + vin + '\'' +
                 ", listaPecas=" + listaPecas +

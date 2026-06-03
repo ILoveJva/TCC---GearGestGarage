@@ -1,11 +1,11 @@
 package model.Servicos;
 
-import model.Funcionario;
-import model.ItemServico;
-import model.OrdemDeServico;
-import model.Veiculo;
+import model.*;
 
-public class S_TrocaOleo extends OrdemDeServico {
+public class S_TrocaOleo extends ServicoMotor {
+
+    private final Motor motor = veiculo.getMotor();
+
     public S_TrocaOleo(long idOrdemDeServico, String titulo, int prazo, Veiculo veiculo, TipoServico tipoServico, Funcionario responsavel) {
         super(idOrdemDeServico, titulo, prazo, veiculo, tipoServico, responsavel);
         for (String a : OrdemDeServico.ETAPAS_OS) {
