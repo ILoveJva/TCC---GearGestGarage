@@ -1,5 +1,6 @@
 package view;
 
+import controller.OficinaController;
 import view.controller.ViewController;
 import javax.swing.*;
 import java.awt.*;
@@ -36,13 +37,14 @@ public class V_PaginaInicial extends JPanel {
     private JButton btn_VisVeiculos;
 
     // Referência do Controlador do Front-end
-    private ViewController viewController;
+    private ViewController viewController = new ViewController();
+
+    private OficinaController controller;
 
     /**
      * Construtor Refatorado: Recebe o controlador de navegação de telas.
      */
     public V_PaginaInicial(ViewController viewController) {
-        this.viewController = viewController;
 
         setBackground(Color.decode("#F5F5F5"));
         setLayout(new BorderLayout(20, 20));
@@ -139,9 +141,9 @@ public class V_PaginaInicial extends JPanel {
      * Preenche os dados visuais com mocks independentes do banco de dados.
      */
     private void carregarInformacoesEstaticas() {
-        lbl_NomeGaragem.setText("Gear Gest Garage (Visualização Independente)");
-        lbl_CnpjGaragem.setText("CNPJ: 00.000.000/0001-00");
-        lbl_Especialidade.setText("Especialidade: Modo de Navegação Ativo");
+
+
+
     }
 
     private void layoutComponents() {
@@ -163,18 +165,16 @@ public class V_PaginaInicial extends JPanel {
         // Exemplo de navegação para a tela de listagem de veículos
         btn_VisVeiculos.addActionListener(e -> {
             // Quando a classe V_VisualizarVeiculos for refatorada para aceitar o ViewController, descomente abaixo:
-            // viewController.navegarPara(new V_VisualizarVeiculos(viewController));
-            JOptionPane.showMessageDialog(this, "Navegando para: Tela de Veículos", "Navegação", JOptionPane.INFORMATION_MESSAGE);
+            viewController.navegarPara(new V_VisualizarVeiculos());
         });
 
         // Vincule as demais ações conforme for ajustando as suas outras views
         btn_PesquisarHeader.addActionListener(e -> System.out.println("Navegar para Pesquisa"));
         btn_AdicionarServico.addActionListener(e -> System.out.println("Navegar para Nova OS"));
-        btn_AdicionarCliente.addActionListener(e -> System.out.println("Navegar para Novo Cliente"));
+        btn_VisClientes.addActionListener(e -> viewController.navegarPara(new V_VisualizarClientes()));
         btn_AdicionarVeiculo.addActionListener(e -> System.out.println("Navegar para Novo Veículo"));
         btn_VisServicos.addActionListener(e -> System.out.println("Navegar para Serviços"));
         btn_VisOrcamentos.addActionListener(e -> System.out.println("Navegar para Orçamentos"));
-        btn_VisClientes.addActionListener(e -> System.out.println("Navegar para Clientes"));
     }
 
     /**

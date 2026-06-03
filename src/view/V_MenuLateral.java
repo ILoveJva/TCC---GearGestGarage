@@ -41,7 +41,7 @@ public class V_MenuLateral extends JPanel {
         Dimension dimBtn = new Dimension(170, 90);
 
         // 1. Configuração do Logotipo / Header do Menu
-        ImageIcon icoLogo = carregarERedimensionarIcone("/assets/icons/logo_menu.png", 50, 50);
+        ImageIcon icoLogo = carregarERedimensionarIcone("/assets/icons/logo.png", 50, 50);
         if (icoLogo != null) {
             lbl_LogoOficina = new JLabel(icoLogo);
         } else {
@@ -57,13 +57,13 @@ public class V_MenuLateral extends JPanel {
         estilizarBotaoMenu(btn_PaginaInicial, "/assets/icons/home.png", dimBtn, 32, 32);
 
         btn_Pesquisar = new JButton("Pesquisar");
-        estilizarBotaoMenu(btn_Pesquisar, "/assets/icons/search_menu.png", dimBtn, 32, 32);
+        estilizarBotaoMenu(btn_Pesquisar, "/assets/icons/pesquisar.png", dimBtn, 32, 32);
 
         btn_Servicos = new JButton("Serviços / O.S.");
-        estilizarBotaoMenu(btn_Servicos, "/assets/icons/services_menu.png", dimBtn, 32, 32);
+        estilizarBotaoMenu(btn_Servicos, "/assets/icons/servicos.png", dimBtn, 32, 32);
 
         btn_Estoque = new JButton("Estoque");
-        estilizarBotaoMenu(btn_Estoque, "/assets/icons/stock.png", dimBtn, 32, 32);
+        estilizarBotaoMenu(btn_Estoque, "/assets/icons/estoque.png", dimBtn, 32, 32);
 
         // 3. Organização dos Componentes no Painel Lateral
         add(lbl_LogoOficina);

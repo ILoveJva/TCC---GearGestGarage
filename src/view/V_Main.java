@@ -12,7 +12,7 @@ public class V_Main extends JFrame {
 
     private ViewController viewController;
 
-    public V_Main(ViewController viewController) {
+    public V_Main() {
         this.viewController = viewController;
 
         setTitle("Sistema de Gerenciamento - Gear Gest Garage");

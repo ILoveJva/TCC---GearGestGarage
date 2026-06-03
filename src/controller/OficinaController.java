@@ -1,10 +1,12 @@
 package controller;
 
+import model.Cliente;
 import model.Estoque;
 import model.Funcionario;
 import model.Oficina;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Gerencia Oficinas, seus Funcionários e Estoques.
@@ -23,6 +25,10 @@ public class OficinaController {
         if (cnpjExistente) return false;
         oficinas.add(oficina);
         return true;
+    }
+
+    public List<Cliente> getTodosClientes() {
+        return null;
     }
 
     public Oficina buscarPorId(long idOficina) {
@@ -55,5 +61,9 @@ public class OficinaController {
 
     public ArrayList<Oficina> listarTodas() {
         return oficinas;
+    }
+
+    public Oficina getOficina() {
+        return new Oficina();
     }
 }

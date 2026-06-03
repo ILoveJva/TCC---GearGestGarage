@@ -8,6 +8,7 @@ public class Oficina {
     private String nome;
     private String cnpj;
     private String endereco;
+    private String descricao;
     private ArrayList<Funcionario> funcionarios;
     private ArrayList<Estoque> estoques;
 
@@ -40,6 +41,14 @@ public class Oficina {
 
     public ArrayList<Funcionario> getFuncionarios() { return funcionarios; }
     public void setFuncionarios(ArrayList<Funcionario> funcionarios) { this.funcionarios = funcionarios; }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
 
     public ArrayList<Estoque> getEstoques() { return estoques; }
     public void setEstoques(ArrayList<Estoque> estoques) { this.estoques = estoques; }

@@ -24,7 +24,7 @@ public class ViewController {
             telaLogin.dispose();
         }
 
-        telaPrincipal = new V_Main(this);
+        telaPrincipal = new V_Main();
         telaPrincipal.setVisible(true);
 
         // Injeta a tela inicial no centro
